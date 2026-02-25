@@ -23,7 +23,7 @@ allBtn.forEach((btn) => {
 });
 
 document.querySelector("main").addEventListener("click", function (event) {
-  const isCallBtn = event.target.classList.contains("call-btn");
+  const isCallBtn = event.target.closest(".call-btn");
   if (isCallBtn) {
     const card = event.target.parentNode.parentNode;
     const serviceName = card.querySelector(".service-name").innerText;
@@ -86,3 +86,8 @@ document.getElementById("clear-history").addEventListener("click", function () {
   }
 });
 
+
+
+document.getElementById('hamburger').addEventListener('click', function(event){
+  console.log(event.target)
+})
